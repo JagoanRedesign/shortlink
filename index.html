@@ -54,7 +54,9 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" id="result">No result</div>
+        <input id="result" onclick="this.focus();this.select()" readonly type="text"> 
+
+        </input>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
