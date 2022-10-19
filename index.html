@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
  <head>
-  <title>Generate Page Safelink : Personal Safelink</title> 
+  <title>Url Shortener</title> 
   <meta charset="UTF-8"> 
   <meta content="width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5" name="viewport"> 
   <meta content="IE=edge" http-equiv="X-UA-Compatible"> 
@@ -33,7 +33,7 @@
   <div class="mainWrapper"> 
    <div class="panel-primary"> 
     <div class="panel-heading"> 
-     <h2>Safe Link Converter</h2> 
+     <h2>Shortener Converter</h2> 
     </div> 
     <div class="panel-body"> 
      <input autocomplete="off" id="text" oninvalid="this.setCustomValidity('Please Enter valid link')" placeholder="Enter your link here..." required type="url"/> 
@@ -45,15 +45,11 @@
      </svg>Generate</button></span> 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      
-    <input id="result" onclick="this.focus();this.select()" readonly type="text"> 
-        </input>
-        
-          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>    
-     
+<div class="modal fade" id="exampleModal" style="display:none;" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">      
+         <input id="result" onclick="this.focus();this.select()" readonly type="text">         
+          <button type="button" class="btn btn-primary" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy URL</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
     </div>
   </div>         
       
@@ -68,7 +64,16 @@
    </div>
   </div> 
 
-
+<script>
+function shorturl() {
+  var x = document.getElementById("exampleModal");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
          
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
