@@ -36,7 +36,7 @@
      <h2>Safe Link Converter</h2> 
     </div> 
     <div class="panel-body"> 
-     <input autocomplete="off" id="text" oninvalid="this.setCustomValidity('Please Enter valid link')" placeholder="Enter your link here..." required type="url"/> 
+     <input type="text" placeholder="Enter your link here..." id="text">
      <span class="input-group-btn"> 
       <button class="btn-primary" type="button" onclick='shorturl()' id="searchbtn">
        <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -48,8 +48,8 @@
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       
-    <input id="result" onclick="this.focus();this.select()" readonly type="text"> 
-        </input>
+    <input id="result" onclick="this.focus();this.select()" readonly type="text"></input>
+        
         
           <button type="button" class="copytoclipboard" onclick='copyurl("result")' data-toggle="popover" data-placement="bottom" data-content="Copied!">Copy</button>
           <!--<button type="button" class="copytoclipboard" data-dismiss="modal">Close</button>    -->
