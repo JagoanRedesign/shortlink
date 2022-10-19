@@ -45,7 +45,7 @@
      </svg>Generate</button></span> 
 
 
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" style="display:none;" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       
     <input id="result" onclick="this.focus();this.select()" readonly type="text"></input>
@@ -69,6 +69,15 @@
    </div>
   </div> 
 <script>
+function shorturl() {
+  var x = document.getElementById("exampleModal");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
 function clearF(target) {
             target.value = "";        
     }
